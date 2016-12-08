@@ -1,6 +1,7 @@
 # Report of Machine Learning course's challenge
 
 ## First Step : Data Analysis
+```html
 <div class="align-center">
 Primarly we can see that there isn't any visible correlation between our
 different features.
@@ -11,3 +12,4 @@ Nevertheless, we do a feature selection using a LogisticRegression estimator
 and the Recursive Feature Elimination Class.
 With this method, we can remove 9 features. 
 </div>
+```
