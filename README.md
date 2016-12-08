@@ -10,8 +10,7 @@ With this method, we can remove 9 features.
 <figure>
 <img src="challenge/corr.png" alt="Correlation matrix of the variables">
 
-<figcaption align="center">Correlation Matrix of the training variables</figcaption>
-</figure>
+<figcaption align="center">*Correlation Matrix of the training variables*</figcaption>
 
 
 ## Second Step Model Selection
