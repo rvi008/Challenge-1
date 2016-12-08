@@ -7,11 +7,12 @@ We can also see that each of the features follows a normal law and there isn't a
 Nevertheless, we do a feature selection using a LogisticRegression estimator and the Recursive Feature Elimination Class.
 With this method, we can remove 9 features. 
 </p>
-<figure>
+<figure
 <img src="challenge/corr.png" alt="Correlation matrix of the variables">
 
 <figcaption align="center">*Correlation Matrix of the training variables*</figcaption>
 
+<img src="challenge/dist.png" alt="Density estimators of the variables">
 
 ## Second Step Model Selection
 <p align="justify">
