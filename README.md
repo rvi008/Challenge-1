@@ -1,7 +1,7 @@
 # Report of Machine Learning course's challenge
 
 ## First Step : Data Analysis
-<p align="left">
+<p align="center">
 Primarly we can see that there isn't any visible correlation between our
 different features.
 We can also see that each of the features follows a normal law and there isn't
