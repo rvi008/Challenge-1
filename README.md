@@ -12,8 +12,6 @@ With this method, we can remove 9 features.
 
 <figcaption align="center">*Correlation Matrix of the training variables*</figcaption>
 
-<img src="challenge/dist.png" alt="Density estimators of the variables">
-
 ## Second Step Model Selection
 <p align="justify">
 We start with a "reference" model which is the one provided in the starter notebook e.g a Logistic Regression.
