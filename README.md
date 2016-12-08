@@ -9,7 +9,7 @@ With this method, we can remove 9 features.
 </p>
 <figure>
 <img src="challenge/corr.png" alt="Correlation matrix of the variables">
-<figcaption>**Matrice de corrélation des variables du jeu de données d'entrainement**</figcaption>
+<figcaption>*Matrice de corrélation des variables*</figcaption>
 
 ## Second Step Model Selection
 <p align="justify">
