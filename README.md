@@ -17,3 +17,5 @@ With this method, we can remove 9 features.
 We start with a "reference" model which is the one provided in the starter notebook e.g a Logistic Regression.
 The score is not so good because we end with a *~0.6385* score on the training set which is very high and means our classifier is **under-fitting** the training set.
 Anyway, we obtain a score of *~1.381* which is worst than predicting 0 for each of the observations e.g undefined  
+
+TODO : Cross-Validation for model selection and plot of learning curves
