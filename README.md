@@ -51,3 +51,13 @@ We can see by plotting the distributions of probabilities of the 2 classes that 
 So we set the prediction to 0 for the observations which are between two bounds found empirically. The best score obtained this way is
 ~0.20.
 </p> 
+
+<p align="justify">
+Next, we try to cross-validate the hidden-layer size parameter to see if it can improve the score. The cross-validated interval is
+[15,20] and the plot below describes our learning error.
+</p>
+
+<figure>
+<img src="challenge/learningcurve.png" alt="Plot of the learning curve">
+<figcaption align="center">Plot of the learning curve</figcaption>
+</figure>
