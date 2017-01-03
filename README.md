@@ -17,6 +17,7 @@ With this method, we can remove 9 features.
 </figure>
 
 ## Second Step Model Selection
+### Neural Network
 <p align="justify">
 We start with a "reference" model which is the one provided in the starter notebook e.g a Logistic Regression.
 The score is not so good because we end with a ~0.6385 score on the training set which is very high and means our classifier is under-fitting the training set.
@@ -51,3 +52,7 @@ We can see by plotting the distributions of probabilities of the 2 classes that 
 So we set the prediction to 0 for the observations which are between two bounds found empirically. The best score obtained this way is
 ~0.20.
 </p>
+
+### K-nearest neighbours
+
+
