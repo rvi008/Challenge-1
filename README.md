@@ -30,8 +30,8 @@ Now, to improve the score we check the effect of Standardization over the traini
 and predict over the training dataset. The score decreased, and it's perhaps linked to the fact that the variables are all Standardized
 gaussian distribution. 
 Anyway, we start with this "base" model and the non-standardized dataset and try to optimize the hyper-parameters.
-In order to do that we use the GridSearchCV class and cross-validate the following parameters : 
 </p>
+In order to do that we use the GridSearchCV class and cross-validate the following parameters : 
 * max_iter [100, 300, 500, 1000]
 * hidden_layer_sizes [2:20]
 * activation ['tanh','identity','logistic','relu']
