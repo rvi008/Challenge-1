@@ -9,7 +9,7 @@ With this method, we can remove 9 features.
 </p>
 <figure>
 <img src="challenge/dist.png" alt="Plots of features' distribution>
-<figcaption align="center">*Plots of features' distribution</figcaption>
+<figcaption align="center">*Plots of features' distribution*</figcaption>
 </figure>
 <figure>
 <img src="challenge/corr.png" alt="Correlation matrix of the variables">
