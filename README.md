@@ -54,5 +54,7 @@ So we set the prediction to 0 for the observations which are between two bounds 
 </p>
 
 ### K-nearest neighbours
-
-
+<p align ="justify">
+We start with a simple KNN classifier : weights set to 'distance', p = 1, algorithm='kd_tree'.The fitting score is perfect (0.0 error) and suggest that we are overfitting. Anyway
+we get a ~0.5 score on the leaderboard which is quite disapointing compared to the first score we got with the Neural Network.   
+We try a grid search on the number of neighbors and the p parameter setting the distance.
