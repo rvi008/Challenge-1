@@ -1,4 +1,4 @@
-
+#! /usr/bin/python
 # coding: utf-8
 
 # In[1]:
@@ -49,10 +49,10 @@ y_train = np.loadtxt(y_train_fname, dtype=np.int)
 
 # In[4]:
 
-sns.set(context="paper", font="monospace")
-corrmat = X_test.corr()
-f, ax = plt.subplots(figsize=(12, 9))
-sns.heatmap(corrmat, vmax=.8, square=True, xticklabels=False, yticklabels=False);
+#sns.set(context="paper", font="monospace")
+#corrmat = X_test.corr()
+#f, ax = plt.subplots(figsize=(12, 9))
+#sns.heatmap(corrmat, vmax=.8, square=True, xticklabels=False, yticklabels=False);
 
 
 # Visiblement, aucune corrélation évidente n'apparait.
@@ -61,7 +61,7 @@ sns.heatmap(corrmat, vmax=.8, square=True, xticklabels=False, yticklabels=False)
 
 # In[5]:
 
-X_train.hist(figsize=(50,50));
+#X_train.hist(figsize=(50,50));
 
 
 # Les variables suivent toutes des lois normales, il n'y a pas de problèmes évidents sur ces densités (distribution anormale, valeurs manquantes ...)
@@ -260,13 +260,13 @@ y_pred = clf3.predict(X_test)
 # In[33]:
 
 proba_class_neg = np.transpose(clf3.predict_proba(X_test))[0]
-n, bins, patches = plt.hist(proba_class_neg, 10, facecolor = 'red')
+#n, bins, patches = plt.hist(proba_class_neg, 10, facecolor = 'red')
 
 
 # In[31]:
 
 proba_class_pos = np.transpose(clf3.predict_proba(X_test))[1]
-npos, binspos, patchespos = plt.hist(proba_class_pos, 10, facecolor = 'blue')
+#npos, binspos, patchespos = plt.hist(proba_class_pos, 10, facecolor = 'blue')
 
 
 # In[34]:
