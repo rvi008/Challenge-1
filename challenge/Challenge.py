@@ -3,7 +3,9 @@
 
 # In[1]:
 
+print("imports ...")
 import numpy as np
+import warnings
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn import linear_model
@@ -21,10 +23,9 @@ from sklearn.cross_validation import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 import sys
 
+warnings.filterwarnings("ignore")
 
-log_file = open("message.log","w")
-sys.stdout = log_file
-
+print("Starting ...")
 # In[2]:
 
 # Critere de performance
@@ -36,7 +37,7 @@ def compute_pred_score(y_true, y_pred):
 
 
 # In[3]:
-
+print("Loading data")
 X_train_fname = 'training_templates.csv'
 y_train_fname = 'training_labels.txt'
 X_test_fname  = 'testing_templates.csv'
@@ -88,6 +89,7 @@ print('Score sur le train : %s' % score)
 
 # In[8]:
 
+print("Feature selection")
 estimator = linear_model.LogisticRegression()
 selector = RFECV(estimator, step=1, cv=5)
 selector = selector.fit(X_train, y_train)
@@ -310,18 +312,10 @@ np.savetxt('y_pred.txt', y_pred, fmt='%d')
 
 # In[ ]:
 
-param_grid = { 'n_neighbors=' : [3,5], 'p':[1,2,3] }
+param_grid = { 'n_neighbors' : [3,5], 'p':[1,2,3] }
 grid_search = GridSearchCV(knn, param_grid=param_grid)
 start = time()
 grid_search.fit(X_train, y_train)
 print("GridSearchCV took %.2f seconds for %d candidate parameter settings."
       % (time() - start, len(grid_search.cv_results_['params'])))
 report(grid_search.cv_results_)
-
-
-sys.stdout = old_stdout
-log_file.close()
-# In[ ]:
-
-
-
