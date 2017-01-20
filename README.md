@@ -57,7 +57,7 @@ So we set the prediction to 0 for the observations which are between two bounds 
 To improve our score we'll proceed differently, we split our train set in learning / validation set with 50/50 splitting. Then we will do 
 several grid search to identify the best parameters we can. We start with broad ranges of values (e.g logspaces) for hidden layer sizes,
 learning rates and we also search the best solver / activation function. Quickly we see a significant impact of the relu function and the
-adam solver. For the two other parameters, we narrow down our research using linspaces, with three other Grid Search CV  we get : </p>
+adam solver. For the two other parameters, we narrow down our research using linspaces, with three other Grid Search CV </p> we get :
 * hidden layer sizes = (168,) eg one layer of 168 neurons
 * alpha = 0.01444.
 <p align="justify">Thereafter, we predict on the validation data left aside with this model
@@ -76,5 +76,26 @@ The result given by the Cross validated grid search is : K = 6 neighbors, weight
 whole trainning set. The result we got is worst than the MLP's one.
 
 
+### Classication of left-aside observations from MLP
+<p align = "justify"> We have about 700 observations left from the Multi-layer Perceptron so why don't we try to classify them  with an other
+classifier ? So we need to subsample the training set with data as similar as possible as the left-aside observations. We use a classical
+measure of distance and calculate it pairwisely (with the function pairwise_distances_argmin) and keep 10% of the argmin for each observation.
+We choose to classify those data with a Support Vector Machine Classifier. So we follow the traditionnal train/validate and GridSearchCV
+hyper-parameters tuning procedure
+</p> 
+The parameters found are :
+* gamma : 0.89696969696969697
+* kernel : rbf
+* C : 2.237
+<p align = "justify">Unfortunately, this classifier do to much misclassification errors, even if we got a 0.186 validation score, we only
+get a 0.24 on the leaderboard. Maybe with an other classifier ? We try a MLP configured differently, as usual we tune the parameters </p>
+and get :
+* Hidden layer sizes : (160,3)
+* alpha : 1.623e-5
+<p align="justify">The validation score is 0.185 and on the leader board we get 0.1877 we also try with a K-Neighbours classifier but the 
+result aren't better.   
+</p>
 
-
+### Generalization
+<p align="justify">We can generalize this methodology and subsample the whole training set with the 10% nearest training data
+from the test set. 
