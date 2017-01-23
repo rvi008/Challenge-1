@@ -98,4 +98,11 @@ result aren't better.
 
 ### Generalization
 <p align="justify">We can generalize this methodology and subsample the whole training set with the 10% nearest training data
-from the test set. 
+from the test set. We test 3 classifiers, a multilayer-perceptron, a SVC and a KNN. As usual we gridsearch the optimal parameters on 80 %
+of the training set. The best classifier in this case was the SVC with a 0.1977 score on the leaderboard.
+</p>
+
+### What could be tried next ?
+<p align ="justify">Maybe it would be possible to improve the score starting from our best model (MLP with probabilities truncated at 0.1
+and 0.9) then trying to classify the unclassified data with an other model and narrow down the prediction probability until there isn't any
+data left</p>
