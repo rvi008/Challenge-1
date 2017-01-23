@@ -57,9 +57,11 @@ So we set the prediction to 0 for the observations which are between two bounds 
 To improve our score we'll proceed differently, we split our train set in learning / validation set with 50/50 splitting. Then we will do 
 several grid search to identify the best parameters we can. We start with broad ranges of values (e.g logspaces) for hidden layer sizes,
 learning rates and we also search the best solver / activation function. Quickly we see a significant impact of the relu function and the
-adam solver. For the two other parameters, we narrow down our research using linspaces, with three other Grid Search CV </p> we get :
+adam solver.</p>
+For the two other parameters, we narrow down our research using linspaces, with three other Grid Search CV  we get :
 * hidden layer sizes = (168,) eg one layer of 168 neurons
 * alpha = 0.01444.
+
 <p align="justify">Thereafter, we predict on the validation data left aside with this model
 trained on half the trainning set. The validation score is ~0.186 which is promising especially if we don't trust the predictions which 
 probabilities are under 90% for positive classification or above 10% for negative classification. Finally we predict on test data and get
